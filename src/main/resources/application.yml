@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: dos-proxy
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 7035
+  ssl:
+    enabled: false
+    key-store: /keystore.jks
+    key-store-password: changeit
+    keyStoreType: PKCS12
+    keyAlias: capacityservice
+
+zuul:
+  addProxyHeaders: false
+  routes:
+    dos:
+      path: /nhsd/dosproxy/ws/pathwayService/**
+      sensitiveHeaders: 
+      stripPrefix: false
+      url: ${dos.service.url}
+     
+             
+dos:
+  service:
+    url: DummyValue
+
+# Spring Boot Actuator configuration
+management:
+  endpoints:
+    web:
+      enabled: true
+      id: health
+      sensitive: false
+      path-mapping:
+        health: /healthcheck
+      base-path: /
+  add-application-context-header: false
+  

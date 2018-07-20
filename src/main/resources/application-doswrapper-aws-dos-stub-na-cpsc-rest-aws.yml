@@ -1,0 +1,14 @@
+# AWS Deployment - running Elastic Beanstalk hosting Docker Containers
+#
+# Uses DosStubClient so no external SOAP calls are made
+# Uses CapacityServiceRestClient (in Capacity Service Client module) so REST calls to the AWS Capacity Service will occur
+
+# This is the URL for the AWS Capacity Service API - note the API username and password should be passed in every
+# call by the Capacity Service client but these values are passed using runtime environment variables.
+# The environment variable names are:
+# "capacity.service.client.api.username" & "capacity.service.client.api.password"
+capacity:
+  service:
+    client:
+      api:
+        url: https://www.bjss-nhsd-capacityservice.co.uk/capacity

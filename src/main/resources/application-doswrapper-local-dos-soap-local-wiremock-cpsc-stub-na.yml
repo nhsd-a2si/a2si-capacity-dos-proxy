@@ -1,0 +1,15 @@
+# Local Deployment - running outside of AWS and Docker
+#
+# Uses DosSoapClient and calls DoS instance in Local WireMock Server
+# Uses CapacityServiceStubClient (in Capacity Service Client module) so no external calls to the service are made
+
+# This is the URL for the Wiremock Server, serving stubbed DoS Soap responses
+dos:
+  service:
+    url: http://127.0.0.1:7010/app/api/webservices
+
+# No Configuration is needed for the Stubbed Capacity Service Client
+
+server:
+  ssl:
+    enabled: false

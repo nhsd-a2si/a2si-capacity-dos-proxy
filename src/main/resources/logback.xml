@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+
+    <!-- PROPERTIES -->
+    <property name="layout" value="%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n" />
+
+    <!-- APPENDERS -->
+    <appender name="a2si-file-appender"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH:-logs/a2si}/a2si-dos-proxy.log</File>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH:-logs/a2si}/a2si-dos-proxy.%d{yyyy-MM-dd-HH}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${layout}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="soap-messages-file-appender"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH:-logs/a2si}/a2si-dos-proxy-soap.log</File>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH:-logs/a2si}/a2si-dos-proxy-soap.%d{yyyy-MM-dd-HH}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${layout}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="console-appender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${layout}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- LOGGERS -->
+    <logger name="com.nhsd.a2si" level="INFO" >
+        <appender-ref ref="a2si-file-appender"/>
+    </logger>
+
+    <logger name="org.springframework" level="INFO" />
+
+    <root>
+        <appender-ref ref="console-appender" />
+    </root>
+
+</configuration>

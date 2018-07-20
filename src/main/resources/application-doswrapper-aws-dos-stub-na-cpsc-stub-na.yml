@@ -1,0 +1,4 @@
+# AWS Deployment - running Elastic Beanstalk hosting Docker Containers
+#
+# Uses DosStubClient so no external SOAP calls are made
+# Uses CapacityServiceStubClient (in Capacity Service Client module) so no external calls to the service are made

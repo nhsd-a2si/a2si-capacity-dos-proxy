@@ -1,0 +1,19 @@
+# AWS Deployment - running Elastic Beanstalk hosting Docker Containers
+#
+# Uses DosSoapClient and calls DoS instance in Local WireMock Server
+# Uses CapacityServiceRestClient (in Capacity Service Client module) so REST calls to the AWS Capacity Service will occur
+
+# This is the URL for the Wiremock Server, serving stubbed DoS Soap responses
+dos:
+  service:
+    url: http://35.178.35.104:8080/app/api/webservices
+
+# This is the URL for the AWS Capacity Service API - note the API username and password should be passed in every
+# call by the Capacity Service client but these values are passed using runtime environment variables.
+# The environment variable names are:
+# "capacity.service.client.api.username" & "capacity.service.client.api.password"
+capacity:
+  service:
+    client:
+      api:
+        url: https://www.bjss-nhsd-capacityservice.co.uk/capacity

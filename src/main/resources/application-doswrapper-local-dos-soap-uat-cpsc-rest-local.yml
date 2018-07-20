@@ -1,0 +1,25 @@
+# Local Deployment - running outside of AWS and Docker
+#
+# Uses DosSoapClient and calls DoS instance in UAT
+# Uses CapacityServiceRestClient (in Capacity Service Client module) so REST calls to the AWS Capacity Service will occur
+
+# This is the URL for the UAT DoS Instance
+dos:
+  service:
+    url: https://uat.pathwaysdos.nhs.uk/app/api/webservices
+
+# This is the URL for the Local Capacity Service API - note the API username and password should be passed in every
+# call by the Capacity Service client but these values are passed using runtime environment variables.
+# The environment variable names are:
+# "capacity.service.client.api.username" & "capacity.service.client.api.password"
+capacity:
+  service:
+    client:
+      api:
+        url: http://localhost:7020/capacity
+        username: dummyValue
+        password: dummyValue
+
+server:
+  ssl:
+    enabled: false

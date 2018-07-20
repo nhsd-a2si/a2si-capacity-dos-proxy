@@ -1,0 +1,11 @@
+# AWS Deployment - running Elastic Beanstalk hosting Docker Containers
+#
+# Uses DosSoapClient and calls DoS instance in Local WireMock Server
+# Uses CapacityServiceStubClient (in Capacity Service Client module) so no external calls to the service are made
+
+# This is the URL for the Wiremock Server, serving stubbed DoS Soap responses
+dos:
+  service:
+    url: http://35.178.35.104:8080/app/api/webservices
+
+# No Configuration is needed for the Stubbed Capacity Service Client

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nhsd.a2si</groupId>
+    <artifactId>a2si-dos-proxy</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>dos-proxy</name>
+    <description>DOS (Directory Of Services) Proxy - Proxy that also uses Capacity &amp; Demand Information to
+        embellish response from DOS System
+    </description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Apache CXF Spring Boot Starter -->
+<!--
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+-->        
+        <!-- Used in "WSDL to Java" generation to create toString methods -->
+<!--
+        <dependency>
+            <groupId>org.apache.cxf.xjc-utils</groupId>
+            <artifactId>cxf-xjc-runtime</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+-->        
+        <!-- Commons lang is in Java generated classes to implement the toString methods -->
+        <!-- Also used for introspection during SOAP error handling -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.6</version>
+        </dependency>
+        
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+		    <version>2.0.0.RELEASE</version>
+		</dependency>
+        
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- Capacity Information Bean passed from Capacity Service to DOS Proxy -->
+        <dependency>
+            <groupId>com.nhsd.a2si</groupId>
+            <artifactId>a2si-capacity-information</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+        <!-- Capacity Service Client -->
+        <dependency>
+            <groupId>com.nhsd.a2si</groupId>
+            <artifactId>a2si-capacity-service-client</artifactId>
+            <version>1.3-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <!-- Plugin that creates an Uber jar with packaged app server (Tomcat) -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- plugin that generates Java classes from WSDL -->
+<!--            
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>${cxf.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceRoot>${project.build.directory}/generated/cxf</sourceRoot>
+                    <wsdlOptions>
+                        <wsdlOption>
+                            <wsdl>${project.basedir}/src/main/resources/wsdl/pathwaysdos.wsdl</wsdl>
+                            <wsdlLocation>classpath:wsdl/pathwaysdos.wsdl</wsdlLocation>
+                            <extraargs>
+                                <extraarg>-impl</extraarg>
+                                <extraarg>-verbose</extraarg>
+                                <extraarg>-xjc-Xts</extraarg>
+                            </extraargs>
+                        </wsdlOption>
+                    </wsdlOptions>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.cxf.xjcplugins</groupId>
+                        <artifactId>cxf-xjc-ts</artifactId>
+                        <version>3.1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>-Dspring.profiles.active=local-dos-stub-cpsc-stub</argLine>
+                    <excludes>**/*IntegrationTest*.java</excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <skipDockerBuild>false</skipDockerBuild>
+                    <imageName>a2si/dos-proxy-image</imageName>
+                    <dockerHost>https://192.168.99.100:2376</dockerHost>
+
+                    <dockerCertPath>/Users/mike.lythgoe/.docker/machine/certs</dockerCertPath>
+                    <dockerDirectory>${basedir}</dockerDirectory>
+
+                    <resources>
+                        <resource>
+                            <directory>${basedir}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>make-zip</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
