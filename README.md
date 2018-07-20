@@ -1,10 +1,10 @@
-# a2si-dos-wrapper
+# a2si-dos-proxy
 This application primarily acts as a proxy between a DoS client and the DoS system itself.
 
 It only takes additional processing when handling a Check Capacity Summary Response, 
 the SOAP response to a DoS SOAP request of CheckCapacitySummary.
 
-When processing CheckCapacitySummaryResponse the wrapper uses the service id of each
+When processing CheckCapacitySummaryResponse the proxy uses the service id of each
 ServiceCareSummaryDestination element in the response and calls the Capacity Service requesting
 Capacity Information for that specific Service Id.
 
