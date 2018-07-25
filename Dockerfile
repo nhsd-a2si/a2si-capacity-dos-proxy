@@ -1,11 +1,11 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 
-ADD ./target/a2si-dos-proxy-0.0.1-SNAPSHOT.jar dos-proxy.jar
+ADD ./target/a2si-dos-proxy-1.0.0-SNAPSHOT.jar dos-proxy.jar
 ADD ./keystore.jks keystore.jks
 
-# Expose 7035, the default port used for Dos Proxy
-EXPOSE 7035
+# Expose 7030, the default port used for Dos Proxy
+EXPOSE 7030
 ENV JAVA_OPTS=""
 RUN ["apk", "update"]
 RUN ["apk", "add", "tzdata"]

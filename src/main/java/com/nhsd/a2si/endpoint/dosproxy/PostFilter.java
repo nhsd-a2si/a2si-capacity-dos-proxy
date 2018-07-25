@@ -24,13 +24,12 @@ public class PostFilter extends ZuulFilter {
 
     private CapacityServiceClient capacityServiceClient;
 
-    private static final String xmlTransactionIdStart = "<ns1:TransactionId>";
-    private static final String xmlTransactionIdEnd = "</" + xmlTransactionIdStart.substring(1);
-    private static final String xmlServiceStart = "<ns1:ServiceCareSummaryDestination>";
-    private static final String xmlServiceEnd = "</" + xmlServiceStart.substring(1);
-    private static final String xmlServiceIdStart = "<ns1:id>";
-    private static final String xmlServiceNotesStart = "<ns1:notes>";
-    private static final String xmlServiceNotesEnd = "</" + xmlServiceNotesStart.substring(1);
+    public static final String xmlTransactionIdStart = "<ns1:TransactionId>";
+    public static final String xmlServiceStart = "<ns1:ServiceCareSummaryDestination>";
+    public static final String xmlServiceEnd = "</" + xmlServiceStart.substring(1);
+    public static final String xmlServiceIdStart = "<ns1:id>";
+    public static final String xmlServiceNotesStart = "<ns1:notes>";
+    public static final String xmlServiceNotesEnd = "</" + xmlServiceNotesStart.substring(1);
     
     @Autowired
     public PostFilter(CapacityServiceClient capacityServiceClient) {

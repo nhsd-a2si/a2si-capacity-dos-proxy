@@ -6,7 +6,7 @@ server:
   error:
     whitelabel:
       enabled: false
-  port: 7035
+  port: 7030
   ssl:
     enabled: false
     key-store: /keystore.jks
@@ -19,6 +19,16 @@ zuul:
   routes:
     dos:
       path: /nhsd/dosproxy/ws/pathwayService/**
+      sensitiveHeaders: 
+      stripPrefix: false
+      url: ${dos.service.url}
+    dos2:
+      path: /nhsd/doswrapper/ws/pathwayService/**
+      sensitiveHeaders: 
+      stripPrefix: false
+      url: ${dos.service.url}
+    dos3:
+      path: /app/api/webservices/**
       sensitiveHeaders: 
       stripPrefix: false
       url: ${dos.service.url}
@@ -40,3 +50,4 @@ management:
       base-path: /
   add-application-context-header: false
   
+logging.level.root: INFO

@@ -6,7 +6,7 @@
 
     <groupId>com.nhsd.a2si</groupId>
     <artifactId>a2si-dos-proxy</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>dos-proxy</name>
@@ -69,6 +69,12 @@
 		    <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
 		    <version>2.0.0.RELEASE</version>
 		</dependency>
+	    <dependency>
+	      <groupId>commons-io</groupId>
+	      <artifactId>commons-io</artifactId>
+	      <version>2.4</version>
+	      <scope>compile</scope>
+	    </dependency>
         
         <!-- Spring Boot Test -->
         <dependency>
@@ -142,10 +148,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+<!--                 
                 <configuration>
                     <argLine>-Dspring.profiles.active=local-dos-stub-cpsc-stub</argLine>
                     <excludes>**/*IntegrationTest*.java</excludes>
                 </configuration>
+-->                
             </plugin>
 
             <plugin>
