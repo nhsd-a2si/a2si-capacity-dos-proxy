@@ -6,8 +6,8 @@
 
 	<bean id="requestConfigBuilder" class="org.apache.http.client.config.RequestConfig"
 	    factory-method="custom">
-	    <property name="socketTimeout" value="60000" /> 
-	    <property name="connectTimeout" value="60000" /> 
+	    <property name="socketTimeout" value="30000" /> 
+	    <property name="connectTimeout" value="2000" /> 
 	</bean>
 	
 	<bean id="requestConfig" factory-bean="requestConfigBuilder" factory-method="build" />
