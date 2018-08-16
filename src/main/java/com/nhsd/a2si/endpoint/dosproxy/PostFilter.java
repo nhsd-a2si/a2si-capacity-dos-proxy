@@ -64,6 +64,8 @@ public class PostFilter extends ZuulFilter {
 
     @Override
     public Object run() {
+        logger.debug("DoS response received");
+
         RequestContext ctx = RequestContext.getCurrentContext();
         
         String sResponseBody = ctx.getResponseBody();
@@ -93,42 +95,27 @@ public class PostFilter extends ZuulFilter {
 	    			
 	    			int idxServiceStart = sResponseBody.indexOf(xmlServiceStart);
 
-
-
+                    logger.debug("Receiving service IDs from the response");
 	    			Map<String, Position> ids = getServiceIds(idxServiceStart, sResponseBody, capacityServiceResponsive);
 	    			countOfDosRecords = ids.size();
+
+                    logger.debug("Got the following service IDs: {}", ids.keySet());
+
 
                     Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(ids.keySet());
                     countOfCapacityRecords = capacityInformation.size();
 
-                    System.out.println();
-
-                    logger.debug("Got Capacity Information: {}", capacityInformation);
-
-                   // capacityInformation.forEach((k, v) -> {
-
-//
-//                        System.out.println(k);
-//                        System.out.println(v);
-//                        System.out.println(" ");
 
                     for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
 
                         int idxServiceNotesStart = ids.get(entry.getKey()).getStart();
                         int idxServiceNotesEnd = ids.get(entry.getKey()).getEnd();
 
-                        // if (idxServiceNotesStart < idxServiceNotesEnd && idxServiceNotesStart > -1 && idxServiceNotesEnd > -1 && idxServiceNotesStart < idxNextServiceStart) {
                         String sNotes = sResponseBody.substring(idxServiceNotesStart + xmlServiceNotesStart.length(), idxServiceNotesEnd);
                         sNotes = entry.getValue() + "\n\n" + sNotes;
                         sResponseBody = sResponseBody.substring(0, idxServiceNotesStart + xmlServiceNotesStart.length()) + sNotes + sResponseBody.substring(idxServiceNotesEnd);
-                        // }
 
                     }
-
-                   // });
-
-
-		
 
 	    		} catch (Exception e) {
 	        		logger.error("Error processing returned XML xml={}, error={})", sResponseBody, e.getMessage());
