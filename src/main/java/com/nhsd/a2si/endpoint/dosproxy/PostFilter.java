@@ -3,6 +3,10 @@ package com.nhsd.a2si.endpoint.dosproxy;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
@@ -79,8 +83,8 @@ public class PostFilter extends ZuulFilter {
 
             String sTransactionId = Utils.getXmlContent(sResponseBody, xmlTransactionIdStart);
 
-            int countOfResponses = 0;
-            int countOfNonNullResponses = 0;
+            int countOfDosRecords = 0;
+            int countOfCapacityRecords = 0;
             int countOfServices = 0;
             
             if (sTransactionId.trim().length() > 0) {
@@ -88,64 +92,44 @@ public class PostFilter extends ZuulFilter {
 	    		try {
 	    			
 	    			int idxServiceStart = sResponseBody.indexOf(xmlServiceStart);
-	    			
-	    			
-	    			while (idxServiceStart > -1) {
-	    				countOfServices++;
-	    				
-	    				int idxNextServiceStart = sResponseBody.indexOf(xmlServiceStart, idxServiceStart+1);
-	    				if (idxNextServiceStart == -1) {
-	    					idxNextServiceStart = Integer.MAX_VALUE;
-	    				}
-	    				int idxServiceEnd = sResponseBody.indexOf(xmlServiceEnd, idxServiceStart+1);
-	    				if (idxServiceEnd > -1 && idxServiceEnd < idxNextServiceStart) {
-	    				
-		    				String sServiceId = Utils.getXmlContent(sResponseBody, xmlServiceIdStart, idxServiceStart+1);
-		    				
-		    				if (sServiceId.trim().length() > 0) {
-	    						
-	    		                if (capacityServiceResponsive) {
-	    		                    try {
-	
-	    		                        logger.debug("Getting Capacity Information for Service Id: {}", sServiceId);
-	
-				                        CapacityInformation capacityInformation =
-				                                capacityServiceClient.getCapacityInformation(sServiceId);
+
+
+
+	    			Map<String, Position> ids = getServiceIds(idxServiceStart, sResponseBody, capacityServiceResponsive);
+	    			countOfDosRecords = ids.size();
+
+                    Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(ids.keySet());
+                    countOfCapacityRecords = capacityInformation.size();
+
+                    System.out.println();
+
+                    logger.debug("Got Capacity Information: {}", capacityInformation);
+
+                   // capacityInformation.forEach((k, v) -> {
+
+//
+//                        System.out.println(k);
+//                        System.out.println(v);
+//                        System.out.println(" ");
+
+                    for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
+
+                        int idxServiceNotesStart = ids.get(entry.getKey()).getStart();
+                        int idxServiceNotesEnd = ids.get(entry.getKey()).getEnd();
+
+                        // if (idxServiceNotesStart < idxServiceNotesEnd && idxServiceNotesStart > -1 && idxServiceNotesEnd > -1 && idxServiceNotesStart < idxNextServiceStart) {
+                        String sNotes = sResponseBody.substring(idxServiceNotesStart + xmlServiceNotesStart.length(), idxServiceNotesEnd);
+                        sNotes = entry.getValue() + "\n\n" + sNotes;
+                        sResponseBody = sResponseBody.substring(0, idxServiceNotesStart + xmlServiceNotesStart.length()) + sNotes + sResponseBody.substring(idxServiceNotesEnd);
+                        // }
+
+                    }
+
+                   // });
+
+
 		
-				                        logger.debug("Got Capacity Information for Service Id: {} with value of: {}",
-		    		                        		sServiceId, capacityInformation);
-		
-				                        countOfResponses++;
-				                        if (capacityInformation != null) {
-			                        		String sMessage = capacityInformation.getMessage();
-			                        		
-			                        		if (sMessage != null && sMessage.length() > 0) {
-			    	                    		countOfNonNullResponses++;
-			    	                    		
-			    	    	    				int idxServiceNotesStart = sResponseBody.indexOf(xmlServiceNotesStart, idxServiceStart+1);
-			    	    	    				int idxServiceNotesEnd = sResponseBody.indexOf(xmlServiceNotesEnd, idxServiceStart+1);
-			    	    	    				if (idxServiceNotesStart < idxServiceNotesEnd && idxServiceNotesStart > -1 && idxServiceNotesEnd > -1 && idxServiceNotesStart < idxNextServiceStart) {
-			    	    	    					String sNotes = sResponseBody.substring(idxServiceNotesStart+xmlServiceNotesStart.length(), idxServiceNotesEnd);
-			    	    	    					sNotes = sMessage + "\n\n" + sNotes;
-			    	    	    					sResponseBody = sResponseBody.substring(0, idxServiceNotesStart+xmlServiceNotesStart.length()) + sNotes + sResponseBody.substring(idxServiceNotesEnd);
-			    	    	    				}
-			                        		}
-				                        }
-		
-				                    } catch(ResourceAccessException resourceAccessException) {
-				                        capacityServiceResponsive = false;
-				                        logger.error("Unable to get response from Capacity Service - possible timeout");
-				                    }
-				                     catch (Exception e) {
-				                        capacityServiceResponsive = false;
-				                        logger.error("Unable to get response from Capacity Service");
-				                    }
-	    		                }
-			                }
-	    				}
-	
-	    				idxServiceStart = sResponseBody.indexOf(xmlServiceStart, idxServiceEnd);
-	    			}
+
 	    		} catch (Exception e) {
 	        		logger.error("Error processing returned XML xml={}, error={})", sResponseBody, e.getMessage());
 	    			e.printStackTrace();
@@ -153,9 +137,9 @@ public class PostFilter extends ZuulFilter {
 	        	
 	
 	            if (capacityServiceResponsive) {
-            		logger.info("DOS returned {} services, of which {} had waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfNonNullResponses, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
+            		logger.info("DOS returned {} services, of which {} had waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfCapacityRecords, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
 	            } else {
-	        		logger.info("DOS returned {} services, of which {} had waiting times, however the capacity service became unresponsive and only {} were checked for waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfNonNullResponses, countOfResponses, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
+	        		logger.info("DOS returned {} services, of which {} had waiting times, however the capacity service became unresponsive and only {} were checked for waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfCapacityRecords, countOfDosRecords, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
 	            }
             } else {
             	logger.info("Controlled unexpected response being returned from DoS");
@@ -165,6 +149,47 @@ public class PostFilter extends ZuulFilter {
         }
 
         return null;
+    }
+
+    private Map<String, Position> getServiceIds(int idxServiceStart, String sResponseBody, boolean capacityServiceResponsive){
+        Map<String, Position> ids = new HashMap<>();
+
+        while (idxServiceStart > -1) {
+
+            int idxNextServiceStart = sResponseBody.indexOf(xmlServiceStart, idxServiceStart+1);
+            if (idxNextServiceStart == -1) {
+                idxNextServiceStart = Integer.MAX_VALUE;
+            }
+            int idxServiceEnd = sResponseBody.indexOf(xmlServiceEnd, idxServiceStart+1);
+            if (idxServiceEnd > -1 && idxServiceEnd < idxNextServiceStart) {
+
+                String sServiceId = Utils.getXmlContent(sResponseBody, xmlServiceIdStart, idxServiceStart+1);
+
+                if (sServiceId.trim().length() > 0) {
+
+                    if (capacityServiceResponsive) {
+                        try {
+
+                            logger.debug("Getting Capacity Information for Service Id: {}", sServiceId);
+
+                            ids.put(sServiceId, new Position(sResponseBody.indexOf(xmlServiceNotesStart, idxServiceStart+1), sResponseBody.indexOf(xmlServiceNotesEnd, idxServiceStart+1)));
+
+                        } catch(ResourceAccessException resourceAccessException) {
+                            capacityServiceResponsive = false;
+                            logger.error("Unable to get response from Capacity Service - possible timeout");
+                        }
+                        catch (Exception e) {
+                            capacityServiceResponsive = false;
+                            logger.error("Unable to get response from Capacity Service");
+                        }
+                    }
+                }
+            }
+
+            idxServiceStart = sResponseBody.indexOf(xmlServiceStart, idxServiceEnd);
+        }
+
+        return ids;
     }
 
 }

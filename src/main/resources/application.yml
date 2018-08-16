@@ -19,21 +19,21 @@ zuul:
   routes:
     dos:
       path: /nhsd/dosproxy/ws/pathwayService/**
-      sensitiveHeaders: 
+      sensitiveHeaders:
       stripPrefix: false
       url: ${dos.service.url}
     dos2:
       path: /nhsd/doswrapper/ws/pathwayService/**
-      sensitiveHeaders: 
+      sensitiveHeaders:
       stripPrefix: false
       url: ${dos.service.url}
     dos3:
       path: /app/api/webservices/**
-      sensitiveHeaders: 
+      sensitiveHeaders:
       stripPrefix: false
       url: ${dos.service.url}
-     
-             
+
+
 dos:
   service:
     url: DummyValue
@@ -49,5 +49,5 @@ management:
         health: /healthcheck
       base-path: /
   add-application-context-header: false
-  
+
 logging.level.root: INFO

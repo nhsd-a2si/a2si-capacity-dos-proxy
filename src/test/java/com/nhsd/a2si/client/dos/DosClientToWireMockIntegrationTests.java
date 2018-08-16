@@ -63,6 +63,7 @@ public class DosClientToWireMockIntegrationTests {
     }
 
     @Test
+	@Ignore
     public void testCheckCapacitySummary() {
     	HttpClient httpClient = new DefaultHttpClient();
     	try {
