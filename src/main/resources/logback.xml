@@ -40,7 +40,7 @@
     </appender>
 
     <!-- LOGGERS -->
-    <logger name="com.nhsd.a2si" level="DEBUG" >
+    <logger name="com.nhsd.a2si" level="INFO" >
         <appender-ref ref="a2si-file-appender"/>
     </logger>
 
