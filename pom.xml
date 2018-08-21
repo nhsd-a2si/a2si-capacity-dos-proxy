@@ -6,7 +6,7 @@
 
     <groupId>com.nhsd.a2si</groupId>
     <artifactId>a2si-dos-proxy</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>dos-proxy</name>
