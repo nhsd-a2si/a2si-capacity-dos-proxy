@@ -17,7 +17,8 @@ capacity:
     client:
       api:
         url: http://localhost:7020/capacity
-
+        username: dummyValue
+        password: dummyValue
 
 server:
   ssl:

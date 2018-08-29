@@ -33,10 +33,9 @@ public class EndpointRouteFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        LOGGER.debug("Building DoS request");
-
 	    RequestContext ctx = RequestContext.getCurrentContext();
 
+        LOGGER.debug("(" + System.identityHashCode(ctx) + ") Building DoS request");
 
         HttpServletRequest request = ctx.getRequest();
 
@@ -51,7 +50,7 @@ public class EndpointRouteFilter extends ZuulFilter {
         String url = ""; // This achieves not adding a slash to the end of the zuul.routes.dos.url application.yml property
         ctx.set("requestURI", url);
 
-        LOGGER.debug("Sending DoS request");
+        LOGGER.debug("(" + System.identityHashCode(ctx) + ") Sending DoS request");
         return null;
     }
 
