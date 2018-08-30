@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+This defines the httpClient that Zuul uses.
+It currently specifies various timeouts and number of concurrent connections.
+It's good if these are higher than the DoS timeouts and concurrent connections.
+ 
+ -->
+
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
@@ -6,8 +15,8 @@
 
 	<bean id="requestConfigBuilder" class="org.apache.http.client.config.RequestConfig"
 	    factory-method="custom">
-	    <property name="socketTimeout" value="30000" /> 
-	    <property name="connectTimeout" value="2000" /> 
+	    <property name="socketTimeout" value="120000" /> 
+	    <property name="connectTimeout" value="12000" /> 
 	</bean>
 	
 	<bean id="requestConfig" factory-bean="requestConfigBuilder" factory-method="build" />
