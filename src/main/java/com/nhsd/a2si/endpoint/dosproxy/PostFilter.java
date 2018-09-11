@@ -64,9 +64,9 @@ public class PostFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        logger.debug("DoS response received");
-
+ 
         RequestContext ctx = RequestContext.getCurrentContext();
+        logger.debug("         (" + System.identityHashCode(ctx) + ") DoS response received");       
         
         String sResponseBody = ctx.getResponseBody();
         if (sResponseBody == null) {
@@ -85,7 +85,6 @@ public class PostFilter extends ZuulFilter {
 
             String sTransactionId = Utils.getXmlContent(sResponseBody, xmlTransactionIdStart);
 
-            int countOfDosRecords = 0;
             int countOfCapacityRecords = 0;
             int countOfServices = 0;
             
@@ -97,7 +96,7 @@ public class PostFilter extends ZuulFilter {
 
                     logger.debug("Receiving service IDs from the response");
 	    			Map<String, Position> ids = getServiceIds(idxServiceStart, sResponseBody, capacityServiceResponsive);
-	    			countOfDosRecords = ids.size();
+	    			countOfServices = ids.size();
 
                     logger.debug("Got the following service IDs: {}", ids.keySet());
 
@@ -126,7 +125,7 @@ public class PostFilter extends ZuulFilter {
 	            if (capacityServiceResponsive) {
             		logger.info("DOS returned {} services, of which {} had waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfCapacityRecords, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
 	            } else {
-	        		logger.info("DOS returned {} services, of which {} had waiting times, however the capacity service became unresponsive and only {} were checked for waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfCapacityRecords, countOfDosRecords, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
+	        		logger.info("DOS returned {} services, of which {} had waiting times, however the capacity service became unresponsive while checking waiting times (TransactionId={}, CaseRef={}, CaseID={})", countOfServices, countOfCapacityRecords, sTransactionId, ctx.get("caseRef"), ctx.get("caseId"));
 	            }
             } else {
             	logger.info("Controlled unexpected response being returned from DoS");
@@ -157,17 +156,17 @@ public class PostFilter extends ZuulFilter {
                     if (capacityServiceResponsive) {
                         try {
 
-                            logger.debug("Getting Capacity Information for Service Id: {}", sServiceId);
+                            //logger.debug("Getting Capacity Information for Service Id: {}", sServiceId);
 
                             ids.put(sServiceId, new Position(sResponseBody.indexOf(xmlServiceNotesStart, idxServiceStart+1), sResponseBody.indexOf(xmlServiceNotesEnd, idxServiceStart+1)));
 
                         } catch(ResourceAccessException resourceAccessException) {
                             capacityServiceResponsive = false;
-                            logger.error("Unable to get response from Capacity Service - possible timeout");
+                            //logger.error("Unable to get response from Capacity Service - possible timeout");
                         }
                         catch (Exception e) {
                             capacityServiceResponsive = false;
-                            logger.error("Unable to get response from Capacity Service");
+                            //logger.error("Unable to get response from Capacity Service");
                         }
                     }
                 }

@@ -38,6 +38,13 @@ dos:
   service:
     url: DummyValue
 
+  httpClient:
+    socketTimeout: 120000
+    connectTimeout: 12000
+    connectionRequestTimeout: 1000
+    maxConnTotal: 400
+    maxConnPerRoute: 200
+
 # Spring Boot Actuator configuration
 management:
   endpoints:

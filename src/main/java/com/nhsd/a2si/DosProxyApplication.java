@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ImportResource;
 
 @EnableZuulProxy
-@ImportResource("classpath:beans.xml")
+//@ImportResource("classpath:httpClient.xml")
 @SpringBootApplication()
 public class DosProxyApplication {
 
