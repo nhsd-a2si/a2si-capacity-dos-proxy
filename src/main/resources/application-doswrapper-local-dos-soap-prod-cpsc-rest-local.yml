@@ -16,7 +16,7 @@ capacity:
   service:
     client:
       api:
-        url: http://capacityservicetest-env.smtchzepkk.us-east-1.elasticbeanstalk.com/capacity
+        url: http://capacityservicetest-env.smtchzepkk.us-east-1.elasticbeanstalk.com
         username: dummyValue
         password: dummyValue
 
