@@ -6,12 +6,14 @@ import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 /*
  * This class constructs 2 beans, "dosRequestConfig" and "dosHttpClient" with settings for 
@@ -61,8 +63,6 @@ public class HttpClientConfiguration {
     	return builder;
     }
 
-
-	@Bean
 	public CredentialsProvider credentialsProvider(String capacityServiceUsername, String capacityServicePassword){
 		CredentialsProvider provider = new BasicCredentialsProvider();
 		UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(capacityServiceUsername, capacityServicePassword);
@@ -70,8 +70,8 @@ public class HttpClientConfiguration {
 		return provider;
 	}
     
-    @Bean
-    public HttpClient dosHttpClient(
+    @Primary @Bean
+	public CloseableHttpClient dosHttpClient(
         	@Value("${dos.httpClient.maxConnTotal}") int maxConnTotal,
         	@Value("${dos.httpClient.maxConnPerRoute}") int maxConnPerRoute,
         	@Value("${dos.httpClient.socketTimeout}") int socketTimeout,
