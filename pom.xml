@@ -6,7 +6,7 @@
 
     <groupId>com.nhsd.a2si</groupId>
     <artifactId>a2si-dos-proxy</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>dos-proxy</name>
@@ -33,7 +33,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -46,7 +46,7 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.6</version>
         </dependency>
-        
+
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
@@ -59,25 +59,25 @@
 	      <version>2.4</version>
 	      <scope>compile</scope>
 	    </dependency>
-        
+
         <!-- Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- Capacity Information Bean passed from Capacity Service to DOS Proxy -->
         <dependency>
             <groupId>com.nhsd.a2si</groupId>
             <artifactId>a2si-capacity-information</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.4.0-SNAPSHOT</version>
         </dependency>
         <!-- Capacity Service Client -->
         <dependency>
             <groupId>com.nhsd.a2si</groupId>
             <artifactId>a2si-capacity-service-client</artifactId>
-            <version>1.6-SNAPSHOT</version>
+            <version>1.6.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
@@ -92,7 +92,7 @@
             </plugin>
 
             <!-- plugin that generates Java classes from WSDL -->
-<!--            
+<!--
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
@@ -132,12 +132,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-<!--                 
+<!--
                 <configuration>
                     <argLine>-Dspring.profiles.active=local-dos-stub-cpsc-stub</argLine>
                     <excludes>**/*IntegrationTest*.java</excludes>
                 </configuration>
--->                
+-->
             </plugin>
 
             <plugin>
