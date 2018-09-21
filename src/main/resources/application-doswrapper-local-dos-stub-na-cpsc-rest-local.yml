@@ -11,7 +11,7 @@ capacity:
   service:
     client:
       api:
-        url: http://localhost:7020/capacity
+        url: http://localhost:7020
 
 server:
   ssl:

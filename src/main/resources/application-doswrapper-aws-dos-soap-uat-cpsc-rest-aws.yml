@@ -16,4 +16,4 @@ capacity:
   service:
     client:
       api:
-        url: https://www.bjss-nhsd-capacityservice.co.uk/capacity
+        url: https://www.bjss-nhsd-capacityservice.co.uk

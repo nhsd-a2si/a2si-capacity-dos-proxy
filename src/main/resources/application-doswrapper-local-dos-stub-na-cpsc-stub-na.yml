@@ -6,3 +6,8 @@
 server:
   ssl:
     enabled: false
+
+capacity:
+    service:
+        username: noddy
+        password: noddy
