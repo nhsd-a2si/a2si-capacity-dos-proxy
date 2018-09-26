@@ -13,7 +13,7 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -88,7 +88,7 @@ public class PostFilter extends ZuulFilter {
                 services.put(entry.getKey(), injectedNote);
             }
 
-            sResponseBody = sResponseBody.replaceAll("(?s)<ns1:CheckCapacitySummaryResult>(.*?)</ns1:CheckCapacitySummaryResult>", "<ns1:CheckCapacitySummaryResult>" + services.values().stream().collect(Collectors.joining()) + "</ns1:CheckCapacitySummaryResult>");
+            sResponseBody = rejoinResponseBody(sResponseBody, services);
 
         } else {
             logger.info("Controlled unexpected response being returned from DoS");
@@ -100,8 +100,12 @@ public class PostFilter extends ZuulFilter {
         return null;
     }
 
+    static String rejoinResponseBody(String sResponseBody, Map<String, String> services) {
+        return sResponseBody.replaceAll("(?s)<ns1:CheckCapacitySummaryResult>(.*?)</ns1:CheckCapacitySummaryResult>", "<ns1:CheckCapacitySummaryResult>" + services.values().stream().collect(Collectors.joining()) + "</ns1:CheckCapacitySummaryResult>");
+    }
+
     static Map<String, String> getServices(String responseBody) {
-        Map<String, String> ids = new HashMap<>();
+        Map<String, String> ids = new LinkedHashMap<>();
         Pattern regex = Pattern.compile("(<ns1:ServiceCareSummaryDestination>\\s*?<ns1:id>(\\d+?)</ns1:id>.*?</ns1:ServiceCareSummaryDestination>)", Pattern.DOTALL);
         Matcher regexMatcher = regex.matcher(responseBody);
         while (regexMatcher.find()) {
@@ -112,7 +116,7 @@ public class PostFilter extends ZuulFilter {
     }
 
     static String injectNoteIntoService(String note, String service) {
-        return service.replaceAll("(?s)<ns1:notes>(.*?</ns1:notes>)", "<ns1:notes>" + note + "\r\n$1");
+        return service.replaceAll("(?s)<ns1:notes>(.*?</ns1:notes>)", "<ns1:notes>" + note + "\n\n$1");
     }
 
 }
