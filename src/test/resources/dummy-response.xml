@@ -761,6 +761,162 @@
             a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
             FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
           <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007041</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007041</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007042</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007042</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007043</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007043</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007044</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007044</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007045</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007045</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007046</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007046</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
       </ns1:CheckCapacitySummaryResult>
     </ns1:CheckCapacitySummaryResponse>
   </env:Body>

@@ -19,7 +19,8 @@ public class PostFilterTest {
 
     private final String[] serviceOrder = new String[]{
             "1402068411", "2000001035", "1411477100", "1411478660", "1353952415", "1315571109", "2000003682",
-            "2000003647", "1316782136", "1311847246", "2000007025", "2000007018"
+            "2000003647", "1316782136", "1311847246", "2000007025", "2000007018", 
+            "3000007041", "3000007042", "3000007043", "3000007044", "3000007045", "3000007046", 
     };
 
     public PostFilterTest() throws IOException {
@@ -29,7 +30,7 @@ public class PostFilterTest {
     @Test
     public void getServicesFromContnet() throws IOException {
         Map<String, String> services = PostFilter.getServices(content);
-        assertTrue(services.size() == 12);
+        assertTrue(services.size() == serviceOrder.length);
         assertTrue(Objects.nonNull(services.get("1402068411")));
     }
 
@@ -53,7 +54,7 @@ public class PostFilterTest {
     @Test
     public void rejoinResponseBody() {
         String rejoinedServices = PostFilter.rejoinResponseBody(content, PostFilter.getServices(content));
-        assertTrue(PostFilter.getServices(rejoinedServices).size() == 12);
+        assertTrue(PostFilter.getServices(rejoinedServices).size() == serviceOrder.length);
         int i = 0;
         for (String s : PostFilter.getServices(rejoinedServices).keySet()) {
             assertThat(s, is(serviceOrder[i]));
@@ -64,9 +65,11 @@ public class PostFilterTest {
     @Test
     public void rejoinResponseBodyAfterInsertions() {
         Map<String, String> services = PostFilter.getServices(content);
+        services.put("3000007046", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("3000007046")));
         services.put("1402068411", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("1402068411")));
         services.put("2000003682", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("2000003682")));
         services.put("2000003647", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("2000003647")));
+        services.put("3000007045", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("3000007045")));
         int i = 0;
         for (String s : PostFilter.getServices(PostFilter.rejoinResponseBody(content, services)).keySet()) {
             assertThat(s, is(serviceOrder[i]));
