@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="https://nww.pathwaysdos.nhs.uk/app/api/webservices">
+  <env:Body>
+    <ns1:CheckCapacitySummaryResponse>
+      <ns1:TransactionId>684B1F18-666A-D52C-EE99-962BFB3C9D45</ns1:TransactionId>
+      <ns1:CheckCapacitySummaryResult>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1402068411</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>GP Practice: Surrey Docks Health Centre (Dr PJ Holden), Southwark, London</ns1:name>
+          <ns1:contactDetails>020 3049 7444</ns1:contactDetails>
+          <ns1:address>12 - 13 BLONDIN WAY, LONDON, SE16 6AE</ns1:address>
+          <ns1:postcode>SE16 6AE</ns1:postcode>
+          <ns1:northings>179821</ns1:northings>
+          <ns1:eastings>536394</ns1:eastings>
+          <ns1:url>http://www.surreydockshc.co.uk/</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>100</ns1:id>
+            <ns1:name>GP in hours</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>G85692</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>020 3049 7433</ns1:nonPublicTelephoneNo>
+          <ns1:fax>020 3049 7445</ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>0.3</ns1:distance>
+          <ns1:notes>Referral Information: ELIGIBLE Patients under caseload of service Temporary Residents AREA COVERED Southwark CCG NOT ELIGIBLE For expected death when service is closed (choose GPOOH) REFERRAL METHOD Patient to telephone for appt ITK for
+            information only FURTHER INFO Offers pre-booked appointments also on; Tuesday and Thursday 07:00 - 08:00
+          </ns1:notes>
+          <ns1:openAllHours>false</ns1:openAllHours>
+          <ns1:rotaSessions>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Monday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Monday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Tuesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Tuesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Wednesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Wednesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Thursday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Thursday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Friday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Friday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+          </ns1:rotaSessions><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>2000001035</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>GP Practice Branch: Kingfisher Medical (Surrey Docks), Southwark, London</ns1:name>
+          <ns1:contactDetails>020 3049 3060</ns1:contactDetails>
+          <ns1:address>12 - 13 BLONDIN WAY, Rotherhithe, LONDON, SE16 6AE</ns1:address>
+          <ns1:postcode>SE16 6AE</ns1:postcode>
+          <ns1:northings>179821</ns1:northings>
+          <ns1:eastings>536394</ns1:eastings>
+          <ns1:url>http://www.kingfishermedicalcentre.co.uk/</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>100</ns1:id>
+            <ns1:name>GP in hours</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>G85020001</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>020 8694 9489</ns1:nonPublicTelephoneNo>
+          <ns1:fax>020 3049 3061</ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>0.3</ns1:distance>
+          <ns1:notes>Referral Information: ELIGIBLE Patients under caseload of service Temporary Residents AREA COVERED Southwark CCG NOT ELIGIBLE For expected death when service is closed (choose GPOOH) REFERRAL METHOD Patient to telephone for appt ITK for
+            information only FURTHER INFO Main surgery is Kingfisher Medical Centre - 0208 692 7373
+          </ns1:notes>
+          <ns1:openAllHours>false</ns1:openAllHours>
+          <ns1:rotaSessions>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Monday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Monday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Tuesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Tuesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Wednesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Wednesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Thursday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Thursday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Friday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Friday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+          </ns1:rotaSessions><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1411477100</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Urgent Care Centre: St Thomas Hospital, Lambeth, London</ns1:name>
+          <ns1:contactDetails></ns1:contactDetails>
+          <ns1:address>St Thomas Hospital, Westminster Bridge Road, London, SE1 7EH</ns1:address>
+          <ns1:postcode>SE1 7EH</ns1:postcode>
+          <ns1:northings>179505</ns1:northings>
+          <ns1:eastings>530705</ns1:eastings>
+          <ns1:url>www.guysandstthomas.nhs.uk</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>106</ns1:id>
+            <ns1:name>GP-Led UCC with ED</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>RJ122001</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>020 7188 6182</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText>You can go straight to this service. You do not need to telephone beforehand.</ns1:referralText>
+          <ns1:distance>3.7</ns1:distance>
+          <ns1:notes>Referral Information: REFERRAL METHOD Patient to self-present at A&amp;E reception. ITK not seen by person on reception. FURTHER INFO GP and Emergency Nurse Practitioner led Urgent Care Centre (UCC) located within the Emergency Department
+            (ED). Patients should first register at ED reception at St Thomas Hospital and will then be directed the short distance to UCC. The UCC will endeavour to see all patients ASAP, but patients are generally seen in order of arrival. Blood tests -
+            7.30am-6pm, Monday to Friday (last patient entry at 5.45pm)</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1411478660</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Urgent Care Centre: Lewisham Hospital, Lewisham, London</ns1:name>
+          <ns1:contactDetails></ns1:contactDetails>
+          <ns1:address>University Hospital Lewisham, Lewisham High Street, London, , SE13 6LH</ns1:address>
+          <ns1:postcode>SE13 6LH</ns1:postcode>
+          <ns1:northings>174602</ns1:northings>
+          <ns1:eastings>537919</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>106</ns1:id>
+            <ns1:name>GP-Led UCC with ED</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>RJ2P9</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>020 8333 3000</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText>You can go straight to this service. You do not need to telephone beforehand.</ns1:referralText>
+          <ns1:distance>3.7</ns1:distance>
+          <ns1:notes>Referral Information: NOT ELIGIBLE Patient requiring routine removal of sutures or dressing changes. AREA COVERED Open Access X-Ray Times Mon - Fri - 09:00-16:30 Blood tests available at Suite 1, Purple Zone</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1353952415</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Urgent Treatment Centre: University College London Hospital, Camden, London</ns1:name>
+          <ns1:contactDetails></ns1:contactDetails>
+          <ns1:address>University College Hospital, 235 Euston Road, London, NW1 2BU</ns1:address>
+          <ns1:postcode>NW1 2BU</ns1:postcode>
+          <ns1:northings>182309</ns1:northings>
+          <ns1:eastings>529347</ns1:eastings>
+          <ns1:url>http://www.uclh.nhs.uk</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>46</ns1:id>
+            <ns1:name>UCC</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>1353952415</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0203 447 6075/6070</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText>You can go straight to this service. You do not need to telephone beforehand.</ns1:referralText>
+          <ns1:distance>4.6</ns1:distance>
+          <ns1:notes>Referral Information: OVERVIEW Urgent treatment centre - PLEASE ADVISE PATIENTS THAT THEY SHOULD ATTEND EMERGENCY DEPARTMENT. REFERRAL CRITERIA NHS 111 - No patient information will be sent through, please DO NOT advise patients that the
+            UTC will be expecting them. Patients MUST present in person at the Emergency Department reception. This is part of the Emergency Department at UCLH not a stand-alone service. EXCLUSIONS Emergency Department will assess X-ray is provided only for
+            patients referred from Urgent Care Center. FURTHER INFORMATION Service provides X-Ray 24 HRS The UTC will NOT provide any advice over the telephone.</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1315571109</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Urgent Care Centre: Whittington Hospital UCC, Islington, London</ns1:name>
+          <ns1:contactDetails></ns1:contactDetails>
+          <ns1:address>Magdala Avenue, London, N19 5NF</ns1:address>
+          <ns1:postcode>N19 5NF</ns1:postcode>
+          <ns1:northings>186991</ns1:northings>
+          <ns1:eastings>529156</ns1:eastings>
+          <ns1:url>www.whittington.nhs.uk</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>46</ns1:id>
+            <ns1:name>UCC</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>1315571109</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 272 3070</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText>You can go straight to this service. You do not need to telephone beforehand.</ns1:referralText>
+          <ns1:distance>6.2</ns1:distance>
+          <ns1:notes>Referral Information: OVERVIEW Urgent Care Centre REFERRAL CRITERIA Please advise patient to attend. The patient’s information will be sent across to Whittington UCC - IMPORTANT: THIS IS BACK-UP INFORMATION ONLY, the patient will still be
+            triaged on arrival as normal and will NOT have an appointment booked. Service accepts referrals from London Ambulance Services. EXCLUSIONS None. FURTHER INFORMATION X-Ray opens 24 HRS For more information please contact service directly.</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>2000003682</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>GP Choice: Surrey Docks Health Centre (Dr Jain), Southwark, London</ns1:name>
+          <ns1:contactDetails>020 3049 3060</ns1:contactDetails>
+          <ns1:address>12 - 13 BLONDIN WAY, LONDON, SE16 6AE</ns1:address>
+          <ns1:postcode>SE16 6AE</ns1:postcode>
+          <ns1:northings>179821</ns1:northings>
+          <ns1:eastings>536394</ns1:eastings>
+          <ns1:url>http://www.kingfishermedicalcentre.co.uk/</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>117</ns1:id>
+            <ns1:name>GP Choice</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>G85020002</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>020 8694 9489</ns1:nonPublicTelephoneNo>
+          <ns1:fax>020 3049 3061</ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>0.3</ns1:distance>
+          <ns1:notes>Referral Information: ******Only to be selected if the patient is at their Home Address and patient is registered with a GP practice out of their normal Home area.******** Please inform the caller to ring the practice for an appointment
+            and state 111 has referred them as a GP Choice scheme user.</ns1:notes>
+          <ns1:openAllHours>false</ns1:openAllHours>
+          <ns1:rotaSessions>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Monday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Monday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Tuesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Tuesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Wednesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Wednesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Thursday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Thursday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Friday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Friday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+          </ns1:rotaSessions><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>2000003647</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>GP Choice: Trafalgar Surgery, Southwark, London</ns1:name>
+          <ns1:contactDetails>0207 703 9271</ns1:contactDetails>
+          <ns1:address>10 Trafalgar Avenue, London, SE15 6NR</ns1:address>
+          <ns1:postcode>SE15 6NR</ns1:postcode>
+          <ns1:northings>178077</ns1:northings>
+          <ns1:eastings>533796</ns1:eastings>
+          <ns1:url>http://www.thetrafalgarsurgery.co.uk</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>117</ns1:id>
+            <ns1:name>GP Choice</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>G85019001</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>020 7252 7198</ns1:nonPublicTelephoneNo>
+          <ns1:fax>0207 252 7209</ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>2.2</ns1:distance>
+          <ns1:notes>Referral Information: ******Only to be selected if the patient is at their Home Address and patient is registered with a GP practice out of their normal Home area.******** Please inform the caller to ring the practice for an appointment
+            and state 111 has referred them as a GP Choice scheme user.</ns1:notes>
+          <ns1:openAllHours>false</ns1:openAllHours>
+          <ns1:rotaSessions>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Monday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Monday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Tuesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Tuesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Wednesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Wednesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Thursday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Thursday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Friday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Friday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>30</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+          </ns1:rotaSessions><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1316782136</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Walk-in Centre: Angel Medical Practice WIC, Islington, London</ns1:name>
+          <ns1:contactDetails>0207 837 1663</ns1:contactDetails>
+          <ns1:address>Ritchie Street Health Centre, 34 Ritchie Street, London, N1 0DG</ns1:address>
+          <ns1:postcode>N1 0DG</ns1:postcode>
+          <ns1:northings>183456</ns1:northings>
+          <ns1:eastings>531334</ns1:eastings>
+          <ns1:url>http://www.angelgp.co.uk/default.asp</ns1:url>
+          <ns1:serviceType>
+            <ns1:id>45</ns1:id>
+            <ns1:name>Walk In Centre (WIC)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>Y02914</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 837 8819</ns1:nonPublicTelephoneNo>
+          <ns1:fax>0207 837 3656</ns1:fax>
+          <ns1:referralText>You can go straight to this service. You do not need to telephone beforehand.</ns1:referralText>
+          <ns1:distance>3.8</ns1:distance>
+          <ns1:notes>Referral Information: OVERVIEW: Public telephone number is working until 18.30. After please call Non- public telephone number to check availability. After 12:00pm, if patients calling NHS 111 need to see a GP within a certain timeframe,
+            please advise them to go back to their registered GP or to another walk-in service. Open to unregistered patients and patients who cannot access their own GP practice. NOTE: Patients information will be sent electronically to this service. However it
+            is a Walk-in service only, so advise patients 111 cannot book them an appointment. This service uses information sent across for monitoring purposes only. REFERRAL CRITERIA: Patients must attend in person and CANNOT phone in advance to access this
+            service. On arrival, they will be allocated a timed appointment slot. Occasionally patients will be directed elsewhere if there are no appointments left in the service for that day. Open until 8pm, but appointments are all allocated by 2.30pm.
+            EXCLUSIONS: What we are UNABLE to help with: • Long term health problems and chronic illnesses • Referrals &amp; investigations for further care • Medication reviews/Test results/Sick notes • Repeat Prescriptions without evidence of the medication •
+            Serious medical &amp; road traffic emergencies • Severe allergic reactions • Wounds that require suturing • Accidental or deliberate overdose of drugs • Long term wound dressings • Dental problems • Emergency follow-up care FURTHER INFORMATION:
+            Ritchie Street Group Practice does NOT accept phone calls on behalf of the service.</ns1:notes>
+          <ns1:openAllHours>false</ns1:openAllHours>
+          <ns1:rotaSessions>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Monday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Monday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Tuesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Tuesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Wednesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Wednesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Thursday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Thursday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Friday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Friday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Saturday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>9</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Saturday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Sunday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>9</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Sunday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Bankholiday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>9</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Bankholiday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>18</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+          </ns1:rotaSessions>
+          <ns1:openTimeSpecifiedSessions>
+            <ns1:openTimeSpecified>25-12-2017-09:00-18:00</ns1:openTimeSpecified>
+            <ns1:openTimeSpecified>26-12-2017-09:00-18:00</ns1:openTimeSpecified>
+            <ns1:openTimeSpecified>01-01-2018-09:00-18:00</ns1:openTimeSpecified>
+          </ns1:openTimeSpecifiedSessions>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>1311847246</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Walk-in Centre: Soho NHS, Central London</ns1:name>
+          <ns1:contactDetails>020 7534 6500</ns1:contactDetails>
+          <ns1:address>Soho NHS Walk-in Centre, 1 Frith Street, London, W1D 3HZ</ns1:address>
+          <ns1:postcode>W1D 3HZ</ns1:postcode>
+          <ns1:northings>181165</ns1:northings>
+          <ns1:eastings>529723</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>45</ns1:id>
+            <ns1:name>Walk In Centre (WIC)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>RYX02</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo></ns1:nonPublicTelephoneNo>
+          <ns1:fax>0300 008 3179</ns1:fax>
+          <ns1:referralText>You can go straight to this service. You do not need to telephone beforehand.</ns1:referralText>
+          <ns1:distance>4.3</ns1:distance>
+          <ns1:notes>Referral Information: Nurse Led WIC</ns1:notes>
+          <ns1:openAllHours>false</ns1:openAllHours>
+          <ns1:rotaSessions>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Monday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Monday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Tuesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Tuesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Wednesday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Wednesday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Thursday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Thursday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Friday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>8</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Friday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Saturday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>10</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Saturday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+            <ns1:ServiceCareItemRotaSession>
+              <ns1:startDayOfWeek>Sunday</ns1:startDayOfWeek>
+              <ns1:startTime>
+                <ns1:hours>10</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:startTime>
+              <ns1:endDayOfWeek>Sunday</ns1:endDayOfWeek>
+              <ns1:endTime>
+                <ns1:hours>20</ns1:hours>
+                <ns1:minutes>0</ns1:minutes>
+              </ns1:endTime>
+              <ns1:status>Open</ns1:status>
+            </ns1:ServiceCareItemRotaSession>
+          </ns1:rotaSessions>
+          <ns1:openTimeSpecifiedSessions>
+            <ns1:openTimeSpecified>30-03-2018-10:00-20:00</ns1:openTimeSpecified>
+            <ns1:openTimeSpecified>31-03-2018-10:00-20:00</ns1:openTimeSpecified>
+            <ns1:openTimeSpecified>01-04-2018-10:00-18:00</ns1:openTimeSpecified>
+            <ns1:openTimeSpecified>02-04-2018-10:00-20:00</ns1:openTimeSpecified>
+          </ns1:openTimeSpecifiedSessions>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>2000007025</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, Tower Hamlets, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E1 1BB</ns1:address>
+          <ns1:postcode>E1 1BB</ns1:postcode>
+          <ns1:northings>181710</ns1:northings>
+          <ns1:eastings>534637</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>2000007025</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>1.5</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>2000007018</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>2000007018</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/></ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007041</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007041</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007042</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007042</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007043</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007043</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007044</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007044</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007045</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007045</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+        <ns1:ServiceCareSummaryDestination>
+          <ns1:id>3000007046</ns1:id>
+          <ns1:capacity>High</ns1:capacity>
+          <ns1:name>Integrated Urgent Care CAS: LAS Speak To and Contact, City and Hackney, London</ns1:name>
+          <ns1:contactDetails>111</ns1:contactDetails>
+          <ns1:address>Telephone Service Only, , E9 6SR</ns1:address>
+          <ns1:postcode>E9 6SR</ns1:postcode>
+          <ns1:northings>185375</ns1:northings>
+          <ns1:eastings>535516</ns1:eastings>
+          <ns1:url></ns1:url>
+          <ns1:serviceType>
+            <ns1:id>133</ns1:id>
+            <ns1:name>Integrated Urgent Care (IUC) Clinical Assessment Service (CAS)</ns1:name>
+          </ns1:serviceType>
+          <ns1:odsCode>3000007046</ns1:odsCode>
+          <ns1:nonPublicTelephoneNo>0207 783 6953</ns1:nonPublicTelephoneNo>
+          <ns1:fax></ns1:fax>
+          <ns1:referralText></ns1:referralText>
+          <ns1:distance>3.2</ns1:distance>
+          <ns1:notes>Referral Information: Service Overview LAS provide the Integrated Urgent Care (IUC) service for North East London. The service covers the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets
+            and Waltham Forest. The clinical hub is virtual and patients will be triaged by an appropriate clinician such a GP, Paramedic, Nurse or Pharmacist. REFERRAL CRITERIA: Service is available to patients residing in, registered with a GP in, or located
+            within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest. Please advise the patient that they will get a call back within the disposition timeframe. If the caller does not get
+            a call back, please ask them to redial 111. EXCLUSIONS: Patients NOT residing in, registered with a GP in, or located within the London boroughs of Barking and Dagenham, Havering, Redbridge, Newham, City and Hackney, Tower Hamlets and Waltham Forest.
+            FURTHER INFORMATION: If there is an operational problem, 111/IUC staff can contact the LAS Supervisor Line on 0207 783 6953</ns1:notes>
+          <ns1:openAllHours>true</ns1:openAllHours><ns1:rotaSessions/><ns1:openTimeSpecifiedSessions/>
+        </ns1:ServiceCareSummaryDestination>
+      </ns1:CheckCapacitySummaryResult>
+    </ns1:CheckCapacitySummaryResponse>
+  </env:Body>
+</env:Envelope>
