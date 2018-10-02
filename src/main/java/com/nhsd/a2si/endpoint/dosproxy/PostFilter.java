@@ -68,30 +68,32 @@ public class PostFilter extends ZuulFilter {
             }
         }
 
-        if (sResponseBody != null) {
+        if(okCode(ctx.getResponseStatusCode())) {
+            if (sResponseBody != null) {
 
-            int countOfServices = 0; // This is from DoS
-            int countOfCapacityRecords = 0; // This is from capacity service
+                int countOfServices = 0; // This is from DoS
+                int countOfCapacityRecords = 0; // This is from capacity service
 
-            logger.debug("Receiving service IDs from the response");
-            Map<String, String> services = getServices(sResponseBody);
-            countOfServices = services.size();
+                logger.debug("Receiving service IDs from the response");
+                Map<String, String> services = getServices(sResponseBody);
+                countOfServices = services.size();
 
-            logger.debug("Got the following service IDs: {}", services.keySet());
+                logger.debug("Got the following service IDs: {}", services.keySet());
 
-            Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet());
-            countOfCapacityRecords = capacityInformation.size();
+                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet());
+                countOfCapacityRecords = capacityInformation.size();
 
-            for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
-                String s = services.get(entry.getKey());
-                String injectedNote = injectNoteIntoService(entry.getValue(), s);
-                services.put(entry.getKey(), injectedNote);
+                for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
+                    String s = services.get(entry.getKey());
+                    String injectedNote = injectNoteIntoService(entry.getValue(), s);
+                    services.put(entry.getKey(), injectedNote);
+                }
+                sResponseBody = rejoinResponseBody(sResponseBody, services);
+            } else {
+                logger.info("Controlled unexpected response being returned from DoS");
             }
-
-            sResponseBody = rejoinResponseBody(sResponseBody, services);
-
         } else {
-            logger.info("Controlled unexpected response being returned from DoS");
+            logger.info("Unexpected response code being returned from DoS: " + ctx.getResponseStatusCode() + " " + sResponseBody);
         }
 
         ctx.setResponseBody(sResponseBody);
@@ -117,6 +119,10 @@ public class PostFilter extends ZuulFilter {
 
     static String injectNoteIntoService(String note, String service) {
         return service.replaceAll("(?s)<ns1:notes>(.*?</ns1:notes>)", "<ns1:notes>" + note + "\n\n$1");
+    }
+
+    static boolean okCode(int code){
+        return (code >= 200 && code < 300);
     }
 
 }
