@@ -10,26 +10,33 @@
 
     <includeBaseDirectory>false</includeBaseDirectory>
 
-    <fileSets>
+<fileSets>
 
-        <fileSet>
-            <directory>${project.build.directory}</directory>
-            <includes>
-                <include>${project.build.finalName}.jar</include>
-            </includes>
-            <outputDirectory>target</outputDirectory>
-        </fileSet>
+    <fileSet>
+        <directory>${project.build.directory}</directory>
+        <includes>
+            <include>${project.build.finalName}.jar</include>
+        </includes>
+        <outputDirectory>target</outputDirectory>
+    </fileSet>
 
-        <fileSet>
-            <directory>${basedir}</directory>
-            <includes>
-                <include>Dockerfile</include>
-                <include>keystore.jks</include>
-                <include>.ebextensions/iptables.config</include>
-            </includes>
-            <outputDirectory>.</outputDirectory>
-        </fileSet>
+    <fileSet>
+        <directory>${project.build.directory}</directory>
+        <includes>
+            <include>Dockerfile</include>
+        </includes>
+        <outputDirectory>.</outputDirectory>
+    </fileSet>
 
-    </fileSets>
+    <fileSet>
+        <directory>${basedir}</directory>
+        <includes>
+            <include>keystore.jks</include>
+            <include>.ebextensions/iptables.config</include>
+        </includes>
+        <outputDirectory>.</outputDirectory>
+    </fileSet>
+
+</fileSets>
 
 </assembly>
