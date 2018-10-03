@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -75,5 +76,18 @@ public class PostFilterTest {
             assertThat(s, is(serviceOrder[i]));
             i++;
         }
+    }
+
+    @Test
+    public void okCode(){
+        assertFalse(PostFilter.okCode(199));
+        assertTrue(PostFilter.okCode(200));
+        assertTrue(PostFilter.okCode(203));
+        assertTrue(PostFilter.okCode(299));
+        assertFalse(PostFilter.okCode(300));
+        assertFalse(PostFilter.okCode(400));
+        assertFalse(PostFilter.okCode(404));
+        assertFalse(PostFilter.okCode(500));
+        assertFalse(PostFilter.okCode(502));
     }
 }
