@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 
-ADD ./target/a2si-dos-proxy-1.0.3.jar dos-proxy.jar
+ADD ./target/a2si-dos-proxy-1.0.4.jar dos-proxy.jar
 ADD ./keystore.jks keystore.jks
 
 # Expose 7030, the default port used for Dos Proxy
