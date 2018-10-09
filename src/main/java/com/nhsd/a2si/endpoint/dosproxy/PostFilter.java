@@ -118,7 +118,12 @@ public class PostFilter extends ZuulFilter {
     }
 
     static String injectNoteIntoService(String note, String service) {
-        return service.replaceAll("(?s)<ns1:notes>(.*?</ns1:notes>)", "<ns1:notes>" + note + "\n\n$1");
+    	String sReplacement = "";
+    	if (note != null && note.trim().length() > 0) {
+    		sReplacement = note + "\n\n";
+    	}
+    	
+        return service.replaceAll("(?s)<ns1:notes>(.*?</ns1:notes>)", "<ns1:notes>" + sReplacement + "$1");
     }
 
     static boolean okCode(int code){

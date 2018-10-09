@@ -70,7 +70,8 @@ public class PostFilterTest {
         services.put("1402068411", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("1402068411")));
         services.put("2000003682", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("2000003682")));
         services.put("2000003647", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("2000003647")));
-        services.put("3000007045", PostFilter.injectNoteIntoService("Here is your message!!!", services.get("3000007045")));
+        // Include blank message test
+        services.put("3000007045", PostFilter.injectNoteIntoService("  ", services.get("3000007045")));
         int i = 0;
         for (String s : PostFilter.getServices(PostFilter.rejoinResponseBody(content, services)).keySet()) {
             assertThat(s, is(serviceOrder[i]));
