@@ -40,11 +40,11 @@
     </appender>
 
     <!-- LOGGERS -->
-    <logger name="com.nhsd.a2si" level="INFO" >
+    <logger name="com.nhsd.a2si" level="DEBUG" >
         <appender-ref ref="a2si-file-appender"/>
     </logger>
 
-    <logger name="org.springframework" level="INFO" />
+    <logger name="org.springframework" level="DEBUG" />
 
     <root>
         <appender-ref ref="console-appender" />

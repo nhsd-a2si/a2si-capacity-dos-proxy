@@ -96,6 +96,7 @@ public class PostFilter extends ZuulFilter {
             logger.info("Unexpected response code being returned from DoS: " + ctx.getResponseStatusCode() + " " + sResponseBody);
         }
 
+        logger.debug("setting response body");
         ctx.setResponseBody(sResponseBody);
 
 
