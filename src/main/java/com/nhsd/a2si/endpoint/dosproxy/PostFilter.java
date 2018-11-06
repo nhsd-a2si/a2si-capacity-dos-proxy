@@ -80,7 +80,8 @@ public class PostFilter extends ZuulFilter {
 
                 logger.debug("Got the following service IDs: {}", services.keySet());
 
-                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet());
+                long logHeaderId = (long) ctx.get("HeaderID");
+                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet(), logHeaderId);
                 countOfCapacityRecords = capacityInformation.size();
 
                 for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {

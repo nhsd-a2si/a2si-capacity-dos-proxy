@@ -67,7 +67,7 @@ public class EndpointRouteFilter extends ZuulFilter {
         LOGGER.debug("Logging the request to DB");
         HeaderLog headerLog = new HeaderLog();
         headerLog.setAction(ctx.getRequest().getMethod().toUpperCase());
-        headerLog.setComponent("Dos Proxy");
+        headerLog.setComponent("dos-proxy");
         headerLog.setUserId(user);
         headerLog.setEndpoint(ctx.getRouteHost().toString());
         headerLog.setHashcode(String.valueOf(System.identityHashCode(ctx)));
