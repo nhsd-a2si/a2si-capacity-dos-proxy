@@ -11,3 +11,11 @@ capacity:
     service:
         username: noddy
         password: noddy
+
+reporting:
+  service:
+    api:
+      base:
+        url: http://localhost:8080
+    username: dummy
+    password: dummy
