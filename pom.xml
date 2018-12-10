@@ -6,7 +6,7 @@
 
     <groupId>com.nhsd.a2si</groupId>
     <artifactId>a2si-dos-proxy</artifactId>
-    <version>1.2.2-SNAPSHOT</version>
+    <version>1.2.2</version>
     <packaging>jar</packaging>
 
     <name>dos-proxy</name>
@@ -71,21 +71,21 @@
         <dependency>
             <groupId>com.nhsd.a2si</groupId>
             <artifactId>a2si-capacity-information</artifactId>
-            <version>1.4.0-SNAPSHOT</version>
+            <version>1.4.0</version>
         </dependency>
 
         <!-- Capacity Service Client -->
         <dependency>
             <groupId>com.nhsd.a2si</groupId>
             <artifactId>a2si-capacity-service-client</artifactId>
-            <version>1.6.1-SNAPSHOT</version>
+            <version>1.6.1</version>
         </dependency>
 
         <!-- Capacity Reporting Service Client -->
         <dependency>
             <groupId>com.nhsd.a2si</groupId>
             <artifactId>a2si-capacity-reporting-service-client</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
 
 
