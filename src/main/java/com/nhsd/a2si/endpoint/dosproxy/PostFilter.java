@@ -3,16 +3,23 @@ package com.nhsd.a2si.endpoint.dosproxy;
 import com.google.common.io.CharStreams;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import com.nhsd.a2si.capacity.reporting.service.client.CapacityReportingServiceClient;
+import com.nhsd.a2si.capacity.reporting.service.dto.log.Header;
 import com.nhsd.a2si.capacityserviceclient.CapacityServiceClient;
+
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -24,6 +31,9 @@ public class PostFilter extends ZuulFilter {
     private static final Logger logger = LoggerFactory.getLogger(PostFilter.class);
 
     private CapacityServiceClient capacityServiceClient;
+    
+    @Autowired
+    private CapacityReportingServiceClient capacityReportingServiceClient;
 
     @Autowired
     public PostFilter(CapacityServiceClient capacityServiceClient) {
@@ -70,19 +80,34 @@ public class PostFilter extends ZuulFilter {
 
         if(okCode(ctx.getResponseStatusCode())) {
             if (sResponseBody != null) {
+                
+                HttpServletRequest request = ctx.getRequest();
+                
+                String user = "unknown";
+                try {
+                	String sRequestBody = IOUtils.toString(request.getReader());
+        			user = Utils.getXmlContent(sRequestBody, "<web:username>");
+                } catch (IOException ioex) {
+                	logger.error("Cannot read posted data");
+                }
 
-                int countOfServices = 0; // This is from DoS
-                int countOfCapacityRecords = 0; // This is from capacity service
+                // CD-809 - Log that a successful call has been made
+                Header header = new Header();
+                header.setAction(ctx.getRequest().getMethod().toUpperCase());
+                header.setComponent("dos-proxy");
+                header.setUserId(user);
+                header.setEndpoint(ctx.getRouteHost().toString());
+                header.setHashcode(String.valueOf(System.identityHashCode(ctx)));
+                header.setTimestamp(new Date());
+                capacityReportingServiceClient.sendLogHeaderToRepotingService(header);
 
                 logger.debug("Receiving service IDs from the response");
                 Map<String, String> services = getServices(sResponseBody);
-                countOfServices = services.size();
 
                 logger.debug("Got the following service IDs: {}", services.keySet());
 
                 long logHeaderId = (long) ctx.get("HeaderID");
                 Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet(), logHeaderId);
-                countOfCapacityRecords = capacityInformation.size();
 
                 for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
                     String s = services.get(entry.getKey());
