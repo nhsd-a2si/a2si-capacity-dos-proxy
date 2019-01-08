@@ -99,14 +99,31 @@ public class PostFilter extends ZuulFilter {
                 header.setEndpoint(ctx.getRouteHost().toString());
                 header.setHashcode(String.valueOf(System.identityHashCode(ctx)));
                 header.setTimestamp(new Date());
-                final Header savedHeader = capacityReportingServiceClient.sendLogHeaderToRepotingService(header);
+                
+                // CD-804 - Catch and log errors from the reporting service, but do not prevent the response from DoS
+                //          from being returned.
+                Header savedHeader = null;
+                try
+                {
+                	savedHeader = capacityReportingServiceClient.sendLogHeaderToRepotingService(header);
+                }
+                catch(Exception ex)
+                {
+                	logger.info("Error returned from reporting service when logging header record: " + ex.getMessage());
+                }
 
                 logger.debug("Receiving service IDs from the response");
                 Map<String, String> services = getServices(sResponseBody);
 
                 logger.debug("Got the following service IDs: {}", services.keySet());
 
-                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet(), savedHeader.getId());
+                Long logHeaderId = null;
+                if(savedHeader!=null)
+                {
+                	logHeaderId = savedHeader.getId();
+                }
+                
+                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet(), logHeaderId);
 
                 for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
                     String s = services.get(entry.getKey());
@@ -122,7 +139,6 @@ public class PostFilter extends ZuulFilter {
         }
 
         ctx.setResponseBody(sResponseBody);
-
 
         return null;
     }
