@@ -99,15 +99,14 @@ public class PostFilter extends ZuulFilter {
                 header.setEndpoint(ctx.getRouteHost().toString());
                 header.setHashcode(String.valueOf(System.identityHashCode(ctx)));
                 header.setTimestamp(new Date());
-                capacityReportingServiceClient.sendLogHeaderToRepotingService(header);
+                final Header savedHeader = capacityReportingServiceClient.sendLogHeaderToRepotingService(header);
 
                 logger.debug("Receiving service IDs from the response");
                 Map<String, String> services = getServices(sResponseBody);
 
                 logger.debug("Got the following service IDs: {}", services.keySet());
 
-                long logHeaderId = (long) ctx.get("HeaderID");
-                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet(), logHeaderId);
+                Map<String, String> capacityInformation = capacityServiceClient.getCapacityInformation(services.keySet(), savedHeader.getId());
 
                 for (Map.Entry<String, String> entry : capacityInformation.entrySet()) {
                     String s = services.get(entry.getKey());
