@@ -23,6 +23,12 @@ pipeline {
                 sh "mvn clean install"
             }
         }
+
+        stage('Build image') {
+		        dir ('.') {
+        	  docker.build("a2si-dos-proxy", " .")
+        }
+    }
 }
 
 }
