@@ -25,10 +25,9 @@ pipeline {
         }
 
         stage('Build image') {
-		        dir ('.') {
-        	  docker.build("a2si-dos-proxy", " .")
+            steps {
+                sh "mvn dockerfile:build"
+            }
         }
     }
-}
-
 }
