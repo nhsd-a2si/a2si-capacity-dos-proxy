@@ -13,3 +13,13 @@ dos:
 server:
   ssl:
     enabled: false
+    
+capacity:
+  service:
+    username: dummy
+    password: dummy
+    
+reporting:
+  service:
+    username: dummy
+    password: dummy
