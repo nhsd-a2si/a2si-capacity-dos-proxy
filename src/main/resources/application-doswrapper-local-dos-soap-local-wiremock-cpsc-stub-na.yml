@@ -23,3 +23,6 @@ reporting:
   service:
     username: dummy
     password: dummy
+    api:
+      base:
+        url: dummy
